@@ -110,7 +110,7 @@ function autocomplete() {
 
   timeTakenElement.textContent = `Time taken: ${timeTaken.toFixed(
     2
-  )} ms, Average Time: ${averageTime} `;
+  )} ms, Average Time: ${averageTime}`;
 
   displaySuggestions(suggestions);
 }
@@ -130,6 +130,12 @@ function displaySuggestions(suggestions) {
   for (const suggestion of suggestions) {
     const listItem = document.createElement("li");
     listItem.textContent = suggestion;
+    listItem.addEventListener("click", () => {
+      // Fill the input with the selected suggestion
+      document.getElementById("autocomplete-input").value = suggestion;
+      // Clear the suggestions list
+      displaySuggestions([]);
+    });
     suggestionsList.appendChild(listItem);
   }
 }
