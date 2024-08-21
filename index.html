@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Autocomplete with Trie</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Indian Cities
+    </h1>
+    <p>Enter Name of City To Search</p>
+    <p id="city-count">Loading city data...</p>
+    <input type="text" id="autocomplete-input" placeholder="Start typing..." oninput="window.autocomplete()">
+    <div id="time-taken"></div>
+    <ul id="suggestions"></ul>
+    <div class="average-times-container">
+      <h2>Average Search Time</h2>
+      <div class="average-times">
+        <p>Trie: <span id="trie-average">Not used yet</span></p>
+      </div>
+    </div>
+  </div>
+  <script src="scripts.js"></script>
+</body>
+
+</html>
