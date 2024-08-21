@@ -110,7 +110,7 @@ function autocomplete() {
 
   timeTakenElement.textContent = `Time taken: ${timeTaken.toFixed(
     2
-  )} ms, Average Time: ${averageTime} ms`;
+  )} ms, Average Time: ${averageTime} `;
 
   displaySuggestions(suggestions);
 }
